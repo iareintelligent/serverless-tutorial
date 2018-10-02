@@ -1,4 +1,4 @@
-service: time-framed-api
+service: notes-app-unique-name
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
@@ -43,7 +43,25 @@ functions:
         handler: create.main
         events:
             - http:
-                  path: events
+                  path: notes
                   method: post
+                  cors: true
+                  authorizer: aws_iam
+
+    get:
+        handler: get.main
+        events:
+            - http:
+                  path: notes
+                  method: get
+                  cors: true
+                  authorizer: aws_iam
+
+    list:
+        handler: list.main
+        events:
+            - http:
+                  path: notes
+                  method: get
                   cors: true
                   authorizer: aws_iam
