@@ -1,0 +1,12 @@
+npx aws-api-gateway-cli-test \
+--username='topher@bythecode.agency' \
+--password='sH4gerbot!' \
+--user-pool-id='us-east-2_7hQ2Tb9rw' \
+--app-client-id='4vkvits8eemiid7rh6td6vfb3c' \
+--cognito-region='us-east-2' \
+--identity-pool-id='us-east-2:3488e0e3-fd8b-4165-8a55-58d9624ed133' \
+--invoke-url='https://4tkhqg43ij.execute-api.us-east-2.amazonaws.com/prod' \
+--api-gateway-region='us-east-2' \
+--path-template='/notes' \
+--method='POST' \
+--body='{"content":"hello world","attachment":"hello.jpg"}'
